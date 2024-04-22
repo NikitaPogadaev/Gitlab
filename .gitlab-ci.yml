@@ -4,12 +4,12 @@ stages:
   - MockTest
 
 
-# Building:
-#   stage: Build
-#   script:
-#     - ./req_ubuntu.sh
-#     - ./build.sh
-#
+Building:
+  stage: Build
+  script:
+    - ./req_ubuntu.sh
+    - ./build.sh
+
 Testing:
   stage: Test
   script:
