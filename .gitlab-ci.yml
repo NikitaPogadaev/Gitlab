@@ -1,9 +1,17 @@
 stages:
-  - Building
+  - Build
+  - Test
 
 
 Building:
-  stage: Building
+  stage: Build
   script:
     - ./req_ubuntu.sh
     - ./build.sh
+
+Testing:
+  stage: Test
+  script:
+    - ./req_ubuntu.sh
+    - ./build.sh --test
+
