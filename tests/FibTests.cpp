@@ -7,11 +7,9 @@
 TEST(Fib, SimpleEqual)
 {
     fibnum::Fib f;
-    int n;
-    std::cin >> n;
-    EXPECT_EQ(n < 30, true);
-    std::cout << f.result(n) << '\n';/*
-    std::cout << fibfunction(n) << '\n';*/
+    int n = 12;
+    EXPECT_EQ(n < 50, true);
+    std::cout << f.result(n) << '\n';
     EXPECT_EQ(f.result(n), fibfunction(n));
 }
 

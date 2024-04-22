@@ -1,6 +1,7 @@
 stages:
   - Build
   - Test
+  - MockTest
 
 
 Building:
@@ -14,4 +15,13 @@ Testing:
   script:
     - ./req_ubuntu.sh
     - ./build.sh --test
+    - ./bin/Test.out
+
+
+MockTesting:
+  stage: MockTest
+  script:
+    - ./req_ubuntu.sh
+    - ./build.sh --mock-test
+    - ./bin/MockTest.out
 

@@ -13,15 +13,15 @@ set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
 
 
-# find_package(
-#   Boost 1.74 REQUIRED
-#   COMPONENTS atomic
-#              )
+find_package(
+  Boost 1.74 REQUIRED
+  COMPONENTS atomic
+             )
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 add_executable(exe main.cpp)
 
 add_subdirectory(src)
-# add_subdirectory(tests)
-# add_subdirectory(mock_tests)
+add_subdirectory(tests)
+add_subdirectory(mock_tests)
 target_link_libraries(exe Func Class)
