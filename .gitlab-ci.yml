@@ -15,7 +15,11 @@ Testing:
   script:
     - ./req_ubuntu.sh
     - ./build.sh --test
-    - ./bin/Test.out
+    - ./Tests.out --gtest_output=xml:TestsRes.xml
+  artifacts:
+    name: 'TestsRes'
+    paths:
+      - TestsRes.xml
 
 
 MockTesting:
@@ -23,5 +27,10 @@ MockTesting:
   script:
     - ./req_ubuntu.sh
     - ./build.sh --mock-test
-    - ./bin/MockTest.out
+    - ./MockTest.out --gtest_output=xml:MockTestRes.xml
+  artifacts:
+    name: 'MockTestRes'
+    paths:
+      - MockTestRes.xml
+
 
