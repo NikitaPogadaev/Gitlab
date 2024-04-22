@@ -10,27 +10,27 @@ stages:
 #     - ./req_ubuntu.sh
 #     - ./build.sh
 #
-# Testing:
-#   stage: Test
-#   script:
-#     - ./req_ubuntu.sh
-#     - ./build.sh --test
-#     - ./bin/Tests.out --gtest_output=xml:TestsRes.xml
-#   artifacts:
-#     name: 'TestsRes'
-#     paths:
-#       - TestsRes.xml
-
-
-MockTesting:
-  stage: MockTest
+Testing:
+  stage: Test
   script:
     - ./req_ubuntu.sh
-    - ./build.sh --mock-test
-    - ./bin/MockTest.out --gtest_output=xml:MockTestRes.xml
+    - ./build.sh --test
+    - ./bin/Tests.out --gtest_output=xml:TestsRes.xml
   artifacts:
-    name: 'MockTestRes'
+    name: 'TestsRes'
     paths:
-      - MockTestRes.xml
+      - TestsRes.xml
+
+
+# MockTesting:
+#   stage: MockTest
+#   script:
+#     - ./req_ubuntu.sh
+#     - ./build.sh --mock-test
+#     - ./bin/MockTest.out --gtest_output=xml:MockTestRes.xml
+#   artifacts:
+#     name: 'MockTestRes'
+#     paths:
+#       - MockTestRes.xml
 
 

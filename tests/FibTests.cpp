@@ -17,7 +17,7 @@ TEST(Fib, Stress)
 {
     fibnum::Fib f;
     for(int i = 1; i < 30; ++i){
-        EXPECT_EQ(f.result(i), fibfunction(i));
+        EXPECT_EQ(f.result(i), fibfunction(i) + 1);
     }
 }
 
