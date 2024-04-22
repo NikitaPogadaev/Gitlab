@@ -1,0 +1,5 @@
+Building:
+  stage: Building
+  script:
+    - ./req_ubuntu.sh
+    - ./build.sh
