@@ -1,3 +1,7 @@
+stages:
+  Building
+
+
 Building:
   stage: Building
   script:
