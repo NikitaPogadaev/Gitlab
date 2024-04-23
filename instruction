@@ -9,3 +9,4 @@ docker volume create fib_bd
 docker run --name kekdock1 -v fib_bd:/Fib/bd -d myp 5
 docker run --rm -v fib_bd:/data alpine cat /data/fib_nums.txt
 
+docker run -it myptest_wep
